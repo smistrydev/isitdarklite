@@ -30,6 +30,9 @@ import cz.msebera.android.httpclient.message.BasicHeader;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    private String adMobId = "pub-2402990675093377";
+
     private static final String TAG = "MainThread";
     LocationManager mLocationManager;
     int update = 0;
@@ -126,7 +129,6 @@ public class MainActivity extends AppCompatActivity {
                                 longAns.setTextColor(Color.WHITE);
                                 answer.setText("YES");
                                 longAns.setText("It is Dark outside.");
-
                             } else {
                                 RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.activity_main);
                                 relativeLayout.setBackgroundColor(Color.WHITE);
