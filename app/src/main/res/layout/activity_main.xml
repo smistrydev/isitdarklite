@@ -8,10 +8,31 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.smistrydev.isitdark.MainActivity">
+    tools:context="com.smistrydev.isitdark.MainActivity"
+    android:background="@color/colorBlack">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="YES"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="36sp"
+        tools:textStyle="bold"
+        android:id="@+id/textViewAnswer" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Yes, it is Dark outside."
+        android:layout_marginTop="107dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        tools:textStyle="bold"
+        android:layout_below="@+id/textViewAnswer"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:id="@+id/textViewLong" />
 </RelativeLayout>
