@@ -13,6 +13,8 @@ import android.util.Log;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.smistrydev.isitdark.rest.SunRestClient;
 import com.smistrydev.isitdark.rest.TimeZoneCalConverter;
@@ -31,7 +33,7 @@ import cz.msebera.android.httpclient.message.BasicHeader;
 public class MainActivity extends AppCompatActivity {
 
 
-    private String adMobId = "pub-2402990675093377";
+    private AdView mAdView;
 
     private static final String TAG = "MainThread";
     LocationManager mLocationManager;
@@ -75,6 +77,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+        mAdView.loadAd(adRequest);
 
         answer = (TextView) findViewById(R.id.textViewAnswer);
         longAns = (TextView) findViewById(R.id.textViewLong);
